@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Ngunduh Mantu | Aprisila & Anry</title>
+    
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Meta Tags -->
+    <meta property="og:title" content="Ngunduh Mantu | Aprisila & Anry" />
+    <meta property="og:description" content="Dengan penuh kebahagiaan, kami mengundang Anda untuk hadir di hari bahagia kami." />
+    <meta property="og:image" content="https://wedding-vivialbian.vercel.app/assets/bg/bg.jpeg" />
+    <meta property="og:url" content="https://wedding-vivialbian.vercel.app/" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader-ring"></div>
+        <div class="loader-flower">🌿</div>
+        <p class="loader-text">Aprisila & Anry</p>
+    </div>
+
+    <!-- Music Control Button -->
+    <button id="music-toggle" class="music-float-btn" aria-label="Putar atau jeda musik" title="Putar atau Jeda Musik">
+        <i class="fas fa-music" aria-hidden="true"></i>
+    </button>
+
+    <!-- Header Navigation -->
+    <nav class="header-nav" id="header-nav" aria-label="Navigasi utama undangan">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h3>A<span>&</span>A</h3>
+            </div>
+            <div class="nav-menu">
+                <button class="nav-link active" data-section="home">Home</button>
+                <button class="nav-link" data-section="info">Info</button>
+                <button class="nav-link" data-section="story">Story</button>
+                <button class="nav-link" data-section="acara">Acara</button>
+                <button class="nav-link" data-section="galeri">Galeri</button>
+                <button class="nav-link" data-section="rsvp">RSVP</button>
+                <button class="nav-link" data-section="gifts">Gifts</button>
+            </div>
+            <div class="nav-guest">
+                <i class="fas fa-user-circle" aria-hidden="true"></i>
+                <span id="nav-guest-name">Tamu</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- HOME Section -->
+        <section id="home" class="section full-screen">
+            <div class="home-cover">
+                <div class="top-invite">
+                    <h2>YOU ARE INVITED</h2>
+                </div>
+                <div class="home-bottom-content">
+                    <div class="countdown-box" id="countdown">
+                        <div class="time-card">
+                            <span id="days">00</span><small>Hari</small>
+                        </div>
+                        <div class="time-card">
+                            <span id="hours">00</span><small>Jam</small>
+                        </div>
+                        <div class="time-card">
+                            <span id="minutes">00</span><small>Menit</small>
+                        </div>
+                        <div class="time-card">
+                            <span id="seconds">00</span><small>Detik</small>
+                        </div>
+                    </div>
+                    <h1 class="home-couple-name">Aprisila & Anry</h1>
+                    <div class="guest-name-wrapper">
+                        <p class="kepada">Kepada Yth.</p>
+                        <p class="guest-name" id="home-guest-name">Tamu Undangan</p>
+                    </div>
+                    <button class="open-btn" id="open-invitation">Buka Undangan</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- INFO Section - Tanpa Flip Card -->
+        <section id="info" class="section full-screen" aria-label="Informasi kedua mempelai">
+            <div class="floating-hearts" id="floating-hearts"></div>
+            <div class="section-container">
+                <h2 class="section-title" data-aos="fade-up">
+                    <i class="fas fa-heart" aria-hidden="true"></i> Tentang Mempelai
+                </h2>
+                <div class="couple-wrapper-static">
+                    <!-- Mempelai Wanita -->
+                    <div class="couple-card-static" data-aos="fade-right" data-aos-duration="1000">
+                        <div class="portrait-frame-static">
+                            <img src="assets/info/wanita.jpeg" alt="Foto Aprisila Tria Ningtias" style="object-position: 50% 0%" />
+                            <div class="portrait-glow"></div>
+                        </div>
+                        <h3>Aprisila Tria Ningtias, S.E</h3>
+                        <p class="card-subtitle-static">Mempelai Wanita</p>
+                        <div class="parent-static">
+                            <i class="fas fa-heart" aria-hidden="true"></i>
+                            <p class="parent-label">Putri dari</p>
+                            <p class="parent-names"><strong>Bapak Z.Supriadi</strong> & <strong>Ibu Sukarti</strong></p>
+                        </div>
+                    </div>
+
+                    <div class="love-icon-desktop-static">
+                        <i class="fas fa-heart animated-love" aria-hidden="true"></i>
+                    </div>
+                    <div class="mobile-love-static">
+                        <i class="fas fa-heart animated-love" aria-hidden="true"></i>
+                    </div>
+
+                    <!-- Mempelai Pria -->
+                    <div class="couple-card-static" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                        <div class="portrait-frame-static">
+                            <img src="assets/info/pria.jpeg" alt="Foto Anry Forza Prayoga" />
+                            <div class="portrait-glow"></div>
+                        </div>
+                        <h3>Anry Forza Prayoga, S.E</h3>
+                        <p class="card-subtitle-static">Mempelai Pria</p>
+                        <div class="parent-static">
+                            <i class="fas fa-heart" aria-hidden="true"></i>
+                            <p class="parent-label">Putra dari</p>
+                            <p class="parent-names"><strong>Bapak Surianto</strong> & <strong>Ibu Endang Suyatmi Ismidar</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="scroll-down-btn-small" aria-label="Gulir ke bagian selanjutnya" title="Scroll ke bawah">
+                <i class="fas fa-chevron-down" aria-hidden="true"></i>
+            </button>
+        </section>
+
+        <!-- STORY Section -->
+        <section id="story" class="section full-screen" aria-label="Cerita perjalanan cinta">
+            <div class="section-container">
+                <h2 class="section-title" data-aos="fade-up">
+                    <i class="fas fa-book-open" aria-hidden="true"></i> Perjalanan Cinta
+                </h2>
+                <div class="timeline-alternating">
+                    <div class="timeline-item-alt" data-aos="fade-right">
+                        <div class="timeline-icon-alt">
+                            <i class="fas fa-comment" aria-hidden="true"></i>
+                        </div>
+                        <div class="timeline-content-alt">
+                            <h4>Perkenalan</h4>
+                            <p>
+                                Kisah cinta kami dimulai dari sebuah perkenalan yang sederhana. 
+                                Dari pertemuan yang tak terduga, tumbuh benih-benih kasih yang 
+                                akhirnya berkembang menjadi ikatan yang kuat.
+                            </p>
+                            <span class="timeline-year">2024</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item-alt right" data-aos="fade-left">
+                        <div class="timeline-icon-alt">
+                            <i class="fas fa-heart" aria-hidden="true"></i>
+                        </div>
+                        <div class="timeline-content-alt">
+                            <h4>Lamaran</h4>
+                            <p>
+                                Dengan restu dan doa dari kedua keluarga, kami memutuskan untuk 
+                                melangkah ke jenjang yang lebih serius. Momen lamaran menjadi 
+                                awal dari perjalanan baru menuju pernikahan.
+                            </p>
+                            <span class="timeline-year">2025</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item-alt" data-aos="fade-right">
+                        <div class="timeline-icon-alt">
+                            <i class="fas fa-mosque" aria-hidden="true"></i>
+                        </div>
+                        <div class="timeline-content-alt">
+                            <h4>Ngunduh Mantu</h4>
+                            <p>
+                                Bismillah, 25 Juli 2026 kami mengikat janji suci dalam acara 
+                                Ngunduh Mantu yang disaksikan oleh keluarga dan sahabat. 
+                                Semoga Allah SWT meridhoi langkah kami.
+                            </p>
+                            <span class="timeline-year">2026</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="scroll-down-btn-small" aria-label="Gulir ke bagian selanjutnya" title="Scroll ke bawah">
+                <i class="fas fa-chevron-down" aria-hidden="true"></i>
+            </button>
+        </section>
+
+        <!-- ACARA Section -->
+        <section id="acara" class="section full-screen" aria-label="Jadwal akad dan resepsi">
+            <div class="section-container">
+                <h2 class="section-title" data-aos="fade-up">
+                    <i class="fas fa-calendar-alt" aria-hidden="true"></i> Ngunduh Mantu
+                </h2>
+                <div class="acara-glass-container">
+                    <div class="acara-glass-card" data-aos="zoom-in" data-aos-duration="800">
+                        <div class="glass-icon">
+                            <i class="fas fa-ring" aria-hidden="true"></i>
+                        </div>
+                        <h3>Akad Nikah</h3>
+                        <div class="glass-info">
+                            <p><i class="fas fa-calendar-day" aria-hidden="true"></i> Sabtu, 25 Juli 2026</p>
+                            <p><i class="fas fa-clock" aria-hidden="true"></i> 08.00 WIB - Selesai</p>
+                            <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> AFD I Bah Jambi</p>
+                        </div>
+                        <a href="https://maps.app.goo.gl/PFL2WgiudX37KVVB8" target="_blank" rel="noopener noreferrer" class="glass-btn">
+                            <i class="fas fa-directions" aria-hidden="true"></i> Buka Maps
+                        </a>
+                    </div>
+                    <div class="acara-glass-card" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+                        <div class="glass-icon">
+                            <i class="fas fa-champagne-glasses" aria-hidden="true"></i>
+                        </div>
+                        <h3>Resepsi</h3>
+                        <div class="glass-info">
+                            <p><i class="fas fa-calendar-day" aria-hidden="true"></i> Sabtu, 25 Juli 2026</p>
+                            <p><i class="fas fa-clock" aria-hidden="true"></i> 10.00 WIB - Selesai</p>
+                            <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> AFD I Bah Jambi</p>
+                        </div>
+                        <a href="https://maps.app.goo.gl/PFL2WgiudX37KVVB8" target="_blank" rel="noopener noreferrer" class="glass-btn">
+                            <i class="fas fa-directions" aria-hidden="true"></i> Buka Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <button class="scroll-down-btn-small" aria-label="Gulir ke bagian selanjutnya" title="Scroll ke bawah">
+                <i class="fas fa-chevron-down" aria-hidden="true"></i>
+            </button>
+        </section>
+
+        <!-- GALERI Section -->
+        <section id="galeri" class="section full-screen" aria-label="Galeri foto kenangan">
+            <div class="section-container">
+                <h2 class="section-title" data-aos="fade-up">
+                    <i class="fas fa-images" aria-hidden="true"></i> Galeri Kenangan
+                </h2>
+                <p class="galeri-quote" data-aos="fade-up">
+                    "Setiap foto menyimpan cerita, kebahagiaan yang abadi"
+                </p>
+                <div class="gallery-grid" id="gallery-grid"></div>
+            </div>
+            <button class="scroll-down-btn-small" aria-label="Gulir ke bagian selanjutnya" title="Scroll ke bawah">
+                <i class="fas fa-chevron-down" aria-hidden="true"></i>
+            </button>
+        </section>
+
+        <!-- Lightbox Modal -->
+        <div id="lightbox-modal" class="lightbox-modal" role="dialog" aria-label="Preview foto galeri">
+            <div class="lightbox-content">
+                <button class="lightbox-close" aria-label="Tutup preview foto" title="Tutup">&times;</button>
+                <div class="lightbox-slider">
+                    <button class="lightbox-prev" aria-label="Foto sebelumnya" title="Sebelumnya">
+                        <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                    </button>
+                    <img id="lightbox-img" src="" alt="Preview foto" />
+                    <button class="lightbox-next" aria-label="Foto berikutnya" title="Selanjutnya">
+                        <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="lightbox-caption"></div>
+            </div>
+        </div>
+
+        <!-- RSVP Section -->
+        <section id="rsvp" class="section full-screen" aria-label="Form konfirmasi kehadiran">
+            <div class="section-container">
+                <h2 class="section-title" data-aos="fade-up">
+                    <i class="fas fa-envelope-open-text" aria-hidden="true"></i> Konfirmasi Kehadiran
+                </h2>
+                <div class="rsvp-wrapper">
+                    <div class="rsvp-card-glass" data-aos="fade-right">
+                        <form id="rsvp-form">
+                            <div class="input-group-glass">
+                                <i class="fas fa-user" aria-hidden="true"></i>
+                                <input type="text" id="rsvp-name" placeholder="Nama Lengkap" required title="Masukkan nama lengkap Anda" />
+                            </div>
+                            <div class="input-group-glass">
+                                <i class="fas fa-calendar-check" aria-hidden="true"></i>
+                                <select id="rsvp-status" required title="Pilih status kehadiran Anda">
+                                    <option value="">Status Kehadiran</option>
+                                    <option value="Hadir">✅ Hadir</option>
+                                    <option value="Tidak Hadir">❌ Tidak Hadir</option>
+                                    <option value="Ragu">🤔 Masih Ragu</option>
+                                </select>
+                            </div>
+                            <div class="input-group-glass">
+                                <i class="fas fa-users" aria-hidden="true"></i>
+                                <input type="number" id="rsvp-guests" placeholder="Jumlah Tamu" min="1" max="10" title="Masukkan jumlah tamu" />
+                            </div>
+                            <div class="input-group-glass">
+                                <i class="fas fa-comment" aria-hidden="true"></i>
+                                <textarea id="rsvp-message" placeholder="Ucapan & Doa (Opsional)" title="Tulis ucapan atau doa"></textarea>
+                            </div>
+                            <button type="submit" class="btn-submit-glass" aria-label="Kirim konfirmasi kehadiran" title="Kirim RSVP">
+                                <i class="fas fa-paper-plane" aria-hidden="true"></i> Kirim Konfirmasi
+                            </button>
+                        </form>
+                        <div id="rsvp-status-message" class="rsvp-message"></div>
+                    </div>
+
+                    <div class="rsvp-data-glass" data-aos="fade-left">
+                        <h4><i class="fas fa-list" aria-hidden="true"></i> Data Konfirmasi Kehadiran</h4>
+                        <div class="table-wrapper">
+                            <table id="rsvp-table">
+                                <thead>
+                                    <tr>
+                                        <th>Timestamp</th>
+                                        <th>Nama Tamu</th>
+                                        <th>Status</th>
+                                        <th>Jumlah</th>
+                                        <th>Ucapan</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="rsvp-table-body">
+                                    <tr>
+                                        <td colspan="5" class="rsvp-loading">Memuat data...</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="scroll-down-btn-small" aria-label="Gulir ke bagian selanjutnya" title="Scroll ke bawah">
+                <i class="fas fa-chevron-down" aria-hidden="true"></i>
+            </button>
+        </section>
+
+        <!-- GIFTS Section -->
+        <section id="gifts" class="section full-screen" aria-label="Informasi hadiah dan doa">
+            <div class="section-container">
+                <h2 class="section-title" data-aos="fade-up">
+                    <i class="fas fa-gift" aria-hidden="true"></i> Kirim Hadiah & Doa
+                </h2>
+                <div class="gift-glass-card" data-aos="flip-up">
+                    <div class="gift-icon-glass">
+                        <i class="fas fa-hand-holding-heart" aria-hidden="true"></i>
+                    </div>
+                    <h3>ANRY FORZA PRAYOGA, S.E</h3>
+                    
+                    <!-- Bank Mandiri -->
+                    <div class="bank-glass">
+                        <i class="fas fa-university" aria-hidden="true"></i>
+                        <div class="bank-info-glass">
+                            <p class="bank-name-glass">Bank Mandiri</p>
+                            <p class="bank-name-glass">Anry Firza Prayoga</p>
+                            <p class="bank-number-glass">1070018074528</p>
+                        </div>
+                    </div>
+
+                    <!-- Bank BNI -->
+                    <div class="bank-glass">
+                        <i class="fas fa-university" aria-hidden="true"></i>
+                        <div class="bank-info-glass">
+                            <p class="bank-name-glass">Bank BNI</p>
+                            <p class="bank-name-glass">Anry Firza Prayoga</p>
+                            <p class="bank-number-glass">2082033184</p>
+                        </div>
+                    </div>
+
+                    <div class="doa-glass">
+                        <i class="fas fa-quote-left" aria-hidden="true"></i>
+                        <p>
+                            "Semoga Allah SWT membalas kebaikan dan kemurahan hati
+                            Bapak/Ibu/Saudara/i. Semoga dilancarkan segala urusan,
+                            dilimpahkan keberkahan, kebahagiaan dunia dan akhirat."
+                        </p>
+                    </div>
+                    <div class="quran-glass">
+                        <i class="fas fa-quran" aria-hidden="true"></i>
+                        <p class="quran-arab">
+                            وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا
+                            لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً
+                        </p>
+                        <p class="quran-arti">
+                            "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan
+                            untukmu pasangan dari jenismu sendiri, agar kamu cenderung dan
+                            merasa tenteram kepadanya, dan dijadikan-Nya di antaramu rasa
+                            kasih dan sayang."
+                        </p>
+                        <span>— QS. Ar-Rum: 21</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Copyright -->
+    <footer class="footer-copyright">
+        <p>© 2026 | Ngunduh Mantu Aprisila & Anry. All rights reserved.</p>
+        <br />
+        <small>
+            Web Design & Development by <strong>Fadlan F F</strong>
+            <a href="https://www.instagram.com/fdlann.26/" target="_blank" rel="noopener noreferrer" class="footer-instagram-link" aria-label="Kunjungi Instagram Fadlan F F" title="Instagram">
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+            </a>
+        </small>
+    </footer>
+
+    <audio id="bgm" loop preload="auto">
+        <source src="assets/music/lagu.mp3" type="audio/mpeg" />
+    </audio>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
