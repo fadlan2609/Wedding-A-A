@@ -35,13 +35,21 @@
         <i class="fas fa-music" aria-hidden="true"></i>
     </button>
 
-    <!-- Header Navigation -->
-    <nav class="header-nav" id="header-nav" aria-label="Navigasi utama undangan">
+    <!-- Header Navigation - HIDDEN AWAL -->
+    <nav class="header-nav" id="header-nav" style="display:none;" aria-label="Navigasi utama undangan">
         <div class="nav-container">
             <div class="nav-logo">
                 <h3>A<span>&</span>A</h3>
             </div>
-            <div class="nav-menu">
+            
+            <!-- Hamburger Menu Button -->
+            <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
+            <div class="nav-menu" id="nav-menu">
                 <button class="nav-link active" data-section="home">Home</button>
                 <button class="nav-link" data-section="info">Info</button>
                 <button class="nav-link" data-section="story">Story</button>
@@ -90,7 +98,7 @@
             </div>
         </section>
 
-        <!-- INFO Section - Tanpa Flip Card -->
+        <!-- INFO Section -->
         <section id="info" class="section full-screen" aria-label="Informasi kedua mempelai">
             <div class="floating-hearts" id="floating-hearts"></div>
             <div class="section-container">
@@ -101,7 +109,7 @@
                     <!-- Mempelai Wanita -->
                     <div class="couple-card-static" data-aos="fade-right" data-aos-duration="1000">
                         <div class="portrait-frame-static">
-                            <img src="assets/info/wanita.jpeg" alt="Foto Aprisila Tria Ningtias" style="object-position: 50% 0%" />
+                            <img src="assets/info/wanita.jpeg" alt="Foto Aprisila Tria Ningtias" />
                             <div class="portrait-glow"></div>
                         </div>
                         <h3>Aprisila Tria Ningtias, S.E</h3>

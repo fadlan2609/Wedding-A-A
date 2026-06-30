@@ -42,6 +42,19 @@ window.addEventListener('load', () => {
     }, 1500);
 });
 
+// ========== HEADER SHOW/HIDE ==========
+let headerShown = false;
+const headerNav = document.getElementById('header-nav');
+
+function showHeader() {
+    if (!headerShown && headerNav) {
+        headerNav.style.display = 'block';
+        headerShown = true;
+        // Trigger reflow untuk animasi
+        void headerNav.offsetWidth;
+    }
+}
+
 // ========== SCROLL FUNCTIONS ==========
 function scrollToNextSection(currentSectionId) {
     const sections = document.querySelectorAll('.section');
@@ -182,7 +195,34 @@ document.addEventListener('touchstart', enableAudioOnInteraction);
 // ========== OPEN INVITATION ==========
 document.getElementById('open-invitation')?.addEventListener('click', () => {
     playMusic();
+    showHeader(); // Tampilkan header saat buka undangan
     scrollToSection('info');
+});
+
+// ========== HAMBURGER MENU TOGGLE ==========
+const hamburgerBtn = document.getElementById('hamburger-btn');
+const navMenu = document.getElementById('nav-menu');
+
+hamburgerBtn?.addEventListener('click', () => {
+    hamburgerBtn.classList.toggle('active');
+    navMenu.classList.toggle('open');
+});
+
+// Tutup menu saat link diklik (mobile)
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        hamburgerBtn?.classList.remove('active');
+        navMenu?.classList.remove('open');
+    });
+});
+
+// Tutup menu saat klik di luar (mobile)
+document.addEventListener('click', (e) => {
+    const isClickInside = headerNav?.contains(e.target);
+    if (!isClickInside && window.innerWidth <= 768) {
+        hamburgerBtn?.classList.remove('active');
+        navMenu?.classList.remove('open');
+    }
 });
 
 // ========== COUNTDOWN ==========
@@ -411,18 +451,6 @@ function createParticleBackground() {
     }
 }
 setTimeout(createParticleBackground, 500);
-
-// ========== EXTRA STYLES ==========
-const extraStyles = document.createElement('style');
-extraStyles.textContent = `
-    @keyframes floatParticle {
-        0% { transform: translateY(0) translateX(0); opacity: 0; }
-        10% { opacity: 0.8; }
-        90% { opacity: 0.8; }
-        100% { transform: translateY(-100vh) translateX(20px); opacity: 0; }
-    }
-`;
-document.head.appendChild(extraStyles);
 
 // ========== RSVP ==========
 const rsvpForm = document.getElementById('rsvp-form');

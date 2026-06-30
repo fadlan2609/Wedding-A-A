@@ -135,6 +135,7 @@ img {
     z-index: 100;
     padding: 12px 20px;
     border-bottom: 1px solid rgba(212, 175, 55, 0.25) !important;
+    transition: transform 0.4s ease;
 }
 
 .nav-container {
@@ -158,10 +159,44 @@ img {
     color: var(--gold);
 }
 
+/* ===== HAMBURGER MENU ===== */
+.hamburger-btn {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    z-index: 101;
+}
+
+.hamburger-line {
+    width: 28px;
+    height: 2.5px;
+    background: var(--gold);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+.hamburger-btn.active .hamburger-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-btn.active .hamburger-line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-btn.active .hamburger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
 .nav-menu {
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .nav-link {
@@ -212,10 +247,69 @@ img {
     border-radius: 50px;
     color: #F6D6B8 !important;
     font-size: 0.8rem;
+    white-space: nowrap;
 }
 
 .nav-guest i {
     margin-right: 6px;
+}
+
+/* ===== RESPONSIVE HEADER - MOBILE ===== */
+@media (max-width: 768px) {
+    .hamburger-btn {
+        display: flex;
+    }
+    
+    .nav-menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 15px 0 10px 0;
+        border-top: 1px solid rgba(212, 175, 55, 0.15);
+        margin-top: 5px;
+    }
+    
+    .nav-menu.open {
+        display: flex;
+    }
+    
+    .nav-link {
+        width: 100%;
+        text-align: center;
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .nav-guest {
+        font-size: 0.75rem;
+        padding: 4px 12px;
+    }
+    
+    .nav-container {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-nav {
+        padding: 10px 15px;
+    }
+    
+    .nav-logo h3 {
+        font-size: 1.2rem;
+    }
+    
+    .nav-link {
+        font-size: 0.8rem;
+        padding: 8px 15px;
+    }
+    
+    .nav-guest {
+        font-size: 0.65rem;
+        padding: 3px 10px;
+    }
 }
 
 /* ========== SECTION BASE ========== */
@@ -1467,4 +1561,12 @@ img {
     z-index: 1001;
     transition: width 0.3s ease;
     box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+}
+
+/* ========== PARTICLES ========== */
+@keyframes floatParticle {
+    0% { transform: translateY(0) translateX(0); opacity: 0; }
+    10% { opacity: 0.8; }
+    90% { opacity: 0.8; }
+    100% { transform: translateY(-100vh) translateX(20px); opacity: 0; }
 }
