@@ -432,7 +432,7 @@ img {
 .home-cover {
     width: 100%;
     height: 100vh;
-    background: url('assets/bg/bg.jpg') center center / cover no-repeat;
+    background: url('assets/bg/bg-new.jpg') center center / cover no-repeat;
     position: relative;
 }
 
