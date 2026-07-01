@@ -328,21 +328,7 @@ function createPetals() {
     container.className = 'petals-container';
     homeSection.appendChild(container);
     
-    const petals = ['🌸', '🌿', '🌺', '✨', '💕'];
-    for (let i = 0; i < 40; i++) {
-        const petal = document.createElement('div');
-        petal.className = 'petal';
-        petal.textContent = petals[Math.floor(Math.random() * petals.length)];
-        petal.style.cssText = `
-            left: ${Math.random() * 100}%;
-            font-size: ${12 + Math.random() * 22}px;
-            opacity: ${0.3 + Math.random() * 0.5};
-            animation-duration: ${6 + Math.random() * 12}s;
-            animation-delay: ${Math.random() * 8}s;
-            transform: rotate(${Math.random() * 360}deg);
-        `;
-        container.appendChild(petal);
-    }
+    
 }
 
 // Panggil petals hanya untuk HOME

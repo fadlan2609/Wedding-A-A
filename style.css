@@ -574,40 +574,6 @@ img {
 }
 
 /* ========== PETALS - ONLY IN HOME ========== */
-.petals-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1;
-    overflow: hidden;
-}
-
-.petal {
-    position: absolute;
-    animation: fall linear infinite;
-    pointer-events: none;
-    opacity: 0.5;
-}
-
-@keyframes fall {
-    0% { 
-        transform: translateY(-20px) rotate(0deg) scale(0.8);
-        opacity: 0;
-    }
-    10% { 
-        opacity: 0.7;
-    }
-    90% { 
-        opacity: 0.7;
-    }
-    100% { 
-        transform: translateY(100vh) rotate(720deg) scale(1.2);
-        opacity: 0;
-    }
-}
 
 /* ========== INFO SECTION - STATIC (NO FLIP) ========== */
 #info {
