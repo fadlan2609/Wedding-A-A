@@ -8,12 +8,12 @@ AOS.init({
 
 // ========== DATA ==========
 const galleryImages = [
-    'assets/galeri/poto1.jpg',
-    'assets/galeri/poto2.jpg',
-    'assets/galeri/poto3.jpg',
-    'assets/galeri/poto4.jpg',
-    'assets/galeri/poto5.jpg',
-    'assets/galeri/poto6.jpg'
+    'assets/galeri/poto1.jpeg',
+    'assets/galeri/poto2.jpeg',
+    'assets/galeri/poto3.jpeg',
+    'assets/galeri/poto4.jpeg',
+    'assets/galeri/poto5.jpeg',
+    'assets/galeri/poto6.jpeg'
 ];
 
 const weddingDate = new Date(2026, 6, 25, 0, 0, 0);
